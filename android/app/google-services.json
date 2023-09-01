@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "638722195564",
+    "project_id": "testcase1-b33f8",
+    "storage_bucket": "testcase1-b33f8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:638722195564:android:c6a04c2c15701f47d59849",
+        "android_client_info": {
+          "package_name": "com.flutterflow.sniffsocial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "638722195564-5d5ob47n34m5t055l7j83r0vi4fjmgot.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfjMR7YAVJM2qNPUNvNoyt2h8_uvYgoDk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "638722195564-5d5ob47n34m5t055l7j83r0vi4fjmgot.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "638722195564-sh57dpnu70geap5me4ffg8rav7i6fp7k.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.flutterflow.sniffsocial"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
