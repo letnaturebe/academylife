@@ -3,9 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>638722195564-sh57dpnu70geap5me4ffg8rav7i6fp7k.apps.googleusercontent.com</string>
+	<string>638722195564-aj5vr02fj6pjsatmqeferkolm7ej53ss.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.638722195564-sh57dpnu70geap5me4ffg8rav7i6fp7k</string>
+	<string>com.googleusercontent.apps.638722195564-aj5vr02fj6pjsatmqeferkolm7ej53ss</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>638722195564-tmse6433kh9mtn4af9llolt1p1nbosdb.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
 	<string>AIzaSyAUI5pPOf9pYj6zcPQ5AMm8Ms7Pg8wj2nk</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +15,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.flutterflow.sniffsocial</string>
+	<string>site.eelnm.academylife</string>
 	<key>PROJECT_ID</key>
 	<string>testcase1-b33f8</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +31,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:638722195564:ios:6b05287a8d25027fd59849</string>
+	<string>1:638722195564:ios:40c1b11651630b1dd59849</string>
 </dict>
 </plist>

@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>testcase1</string>
+	<string>학원생활</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -13,7 +13,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>testcase1</string>
+	<string>academylife</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 
@@ -28,7 +28,7 @@
             <string>Editor</string>
             <key>CFBundleURLSchemes</key>
             <array>
-                <string>com.googleusercontent.apps.638722195564-sh57dpnu70geap5me4ffg8rav7i6fp7k</string>
+                <string>com.googleusercontent.apps.638722195564-aj5vr02fj6pjsatmqeferkolm7ej53ss</string>
                 
             </array>
         </dict>
@@ -37,10 +37,10 @@
         <key>CFBundleTypeRole</key>
         <string>Editor</string>
         <key>CFBundleURLName</key>
-        <string>testcase1.com</string>
+        <string>academylife.com</string>
         <key>CFBundleURLSchemes</key>
         <array>
-        <string>testcase1</string>
+        <string>academylife</string>
         </array>
         </dict>
     </array>
