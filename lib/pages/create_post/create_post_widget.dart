@@ -220,7 +220,7 @@ class _CreatePostWidgetState extends State<CreatePostWidget> {
                                         _model.uploadedFileUrl))
                                       Align(
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.00, 0.00),
                                         child: FlutterFlowMediaDisplay(
                                           path: _model.uploadedFileUrl,
                                           imageBuilder: (path) => Image.network(

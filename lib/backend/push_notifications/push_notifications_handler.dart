@@ -114,7 +114,7 @@ final parametersBuilderMap =
     <String, Future<ParameterData> Function(Map<String, dynamic>)>{
   'login': ParameterData.none(),
   'createAccount': ParameterData.none(),
-  'createDogProfile': ParameterData.none(),
+  'createAcademyProfile': ParameterData.none(),
   'createYourProfile': ParameterData.none(),
   'forgotPassword': ParameterData.none(),
   'homePage': ParameterData.none(),

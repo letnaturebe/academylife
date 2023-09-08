@@ -98,9 +98,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => CreateAccountWidget(),
         ),
         FFRoute(
-          name: 'createDogProfile',
-          path: '/createDogProfile',
-          builder: (context, params) => CreateDogProfileWidget(),
+          name: 'createAcademyProfile',
+          path: '/createAcademyProfile',
+          builder: (context, params) => CreateAcademyProfileWidget(),
         ),
         FFRoute(
           name: 'createYourProfile',

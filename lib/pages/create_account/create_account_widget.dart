@@ -62,12 +62,12 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.00, 0.00),
                   child: Padding(
                     padding:
                         EdgeInsetsDirectional.fromSTEB(24.0, 56.0, 0.0, 0.0),
                     child: Image.asset(
-                      'assets/images/logoSniff@2x.png',
+                      'assets/images/images.jpeg',
                       width: 140.0,
                       height: 40.0,
                       fit: BoxFit.fitWidth,
@@ -90,7 +90,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                   end: AlignmentDirectional(0, 1.0),
                 ),
               ),
-              alignment: AlignmentDirectional(0.0, 0.8),
+              alignment: AlignmentDirectional(0.00, 0.80),
               child: Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 44.0),
                 child: Column(
@@ -104,7 +104,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Text(
-                            'Welcome,',
+                            '관리자 계정 생성',
                             style: FlutterFlowTheme.of(context).displaySmall,
                           ),
                         ],
@@ -122,7 +122,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Text(
-                                'Create your account below, or',
+                                '이미 계정이 있다면',
                                 style: FlutterFlowTheme.of(context).bodyMedium,
                               ),
                               FFButtonWidget(
@@ -191,7 +191,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                             controller: _model.email1Controller,
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelText: 'Your email...',
+                              labelText: '이메일',
                               labelStyle:
                                   FlutterFlowTheme.of(context).bodySmall,
                               enabledBorder: OutlineInputBorder(
@@ -255,7 +255,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                             controller: _model.passwordController,
                             obscureText: !_model.passwordVisibility,
                             decoration: InputDecoration(
-                              labelText: 'Password',
+                              labelText: '비밀번호',
                               labelStyle:
                                   FlutterFlowTheme.of(context).bodySmall,
                               enabledBorder: OutlineInputBorder(
@@ -316,7 +316,8 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                           EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 12.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.end,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
@@ -336,7 +337,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                                 }
 
                                 context.goNamedAuth(
-                                    'createDogProfile', context.mounted);
+                                    'createAcademyProfile', context.mounted);
                               },
                               text: 'Create Account',
                               options: FFButtonOptions(
@@ -363,47 +364,6 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                             ),
                           ),
                         ],
-                      ),
-                    ),
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(2.0, 0.0, 0.0, 12.0),
-                      child: FFButtonWidget(
-                        onPressed: () async {
-                          context.pushNamed(
-                            'createAccount',
-                            extra: <String, dynamic>{
-                              kTransitionInfoKey: TransitionInfo(
-                                hasTransition: true,
-                                transitionType: PageTransitionType.fade,
-                                duration: Duration(milliseconds: 200),
-                              ),
-                            },
-                          );
-                        },
-                        text: 'Continue as guest',
-                        options: FFButtonOptions(
-                          width: 200.0,
-                          height: 40.0,
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 0.0),
-                          iconPadding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 0.0),
-                          color: Color(0x00FFFFFF),
-                          textStyle: FlutterFlowTheme.of(context)
-                              .titleSmall
-                              .override(
-                                fontFamily: 'Urbanist',
-                                color: FlutterFlowTheme.of(context).secondary,
-                                fontSize: 14.0,
-                              ),
-                          elevation: 0.0,
-                          borderSide: BorderSide(
-                            color: Colors.transparent,
-                            width: 1.0,
-                          ),
-                          borderRadius: BorderRadius.circular(8.0),
-                        ),
                       ),
                     ),
                   ],

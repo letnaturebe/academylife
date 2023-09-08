@@ -39,6 +39,7 @@ dependencies:
     git:
       url: https://github.com/FlutterFlow/flutterflow_dash_chat.git
 
+  dropdown_button2: 2.0.0
   file_picker: 5.2.6
   firebase_auth: 4.6.2
   firebase_auth_platform_interface: 6.15.2

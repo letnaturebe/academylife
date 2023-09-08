@@ -35,7 +35,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
       vsync: this,
       length: 2,
       initialIndex: 0,
-    );
+    )..addListener(() => setState(() {}));
   }
 
   @override
@@ -113,7 +113,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                     ),
                                     Align(
                                       alignment:
-                                          AlignmentDirectional(-1.0, 0.0),
+                                          AlignmentDirectional(-1.00, 0.00),
                                       child: Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 4.0, 0.0, 0.0),
@@ -133,7 +133,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                     ),
                                     Align(
                                       alignment:
-                                          AlignmentDirectional(-1.0, 0.0),
+                                          AlignmentDirectional(-1.00, 0.00),
                                       child: Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 8.0, 0.0, 0.0),
@@ -162,7 +162,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                     borderRadius: BorderRadius.circular(90.0),
                                   ),
                                   child: Align(
-                                    alignment: AlignmentDirectional(0.85, 0.0),
+                                    alignment: AlignmentDirectional(0.85, 0.00),
                                     child: Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           4.0, 4.0, 4.0, 4.0),
@@ -291,7 +291,6 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                             ),
                           ],
                           controller: _model.tabBarController,
-                          onTap: (value) => setState(() {}),
                         ),
                       ),
                       Expanded(

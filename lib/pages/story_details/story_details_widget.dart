@@ -4,6 +4,7 @@ import '/components/delete_story/delete_story_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
 import 'package:flutter/material.dart';
@@ -121,7 +122,7 @@ class _StoryDetailsWidgetState extends State<StoryDetailsWidget> {
                                       ),
                                       Align(
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.00, 0.00),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           mainAxisAlignment:
@@ -553,7 +554,7 @@ class _StoryDetailsWidgetState extends State<StoryDetailsWidget> {
                           },
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.95, 0.7),
+                          alignment: AlignmentDirectional(0.95, 0.70),
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 10.0),

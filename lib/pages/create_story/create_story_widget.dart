@@ -153,7 +153,7 @@ class _CreateStoryWidgetState extends State<CreateStoryWidget> {
                       ),
                     if (functions.hasUploadedMedia(_model.uploadedFileUrl2))
                       Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.00, 0.00),
                         child: FlutterFlowMediaDisplay(
                           path: _model.uploadedFileUrl2,
                           imageBuilder: (path) => Image.network(

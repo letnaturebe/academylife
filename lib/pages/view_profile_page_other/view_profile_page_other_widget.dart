@@ -40,7 +40,7 @@ class _ViewProfilePageOtherWidgetState extends State<ViewProfilePageOtherWidget>
       vsync: this,
       length: 2,
       initialIndex: 0,
-    );
+    )..addListener(() => setState(() {}));
   }
 
   @override
@@ -137,7 +137,7 @@ class _ViewProfilePageOtherWidgetState extends State<ViewProfilePageOtherWidget>
                                     ),
                                     Align(
                                       alignment:
-                                          AlignmentDirectional(-1.0, 0.0),
+                                          AlignmentDirectional(-1.00, 0.00),
                                       child: Text(
                                         viewProfilePageOtherUsersRecord.email,
                                         textAlign: TextAlign.start,
@@ -153,7 +153,7 @@ class _ViewProfilePageOtherWidgetState extends State<ViewProfilePageOtherWidget>
                                     ),
                                     Align(
                                       alignment:
-                                          AlignmentDirectional(-1.0, 0.0),
+                                          AlignmentDirectional(-1.00, 0.00),
                                       child: Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 8.0, 0.0, 0.0),
@@ -183,7 +183,7 @@ class _ViewProfilePageOtherWidgetState extends State<ViewProfilePageOtherWidget>
                                     ),
                                     child: Align(
                                       alignment:
-                                          AlignmentDirectional(0.85, 0.0),
+                                          AlignmentDirectional(0.85, 0.00),
                                       child: Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             4.0, 4.0, 4.0, 4.0),
@@ -286,7 +286,6 @@ class _ViewProfilePageOtherWidgetState extends State<ViewProfilePageOtherWidget>
                             ),
                           ],
                           controller: _model.tabBarController,
-                          onTap: (value) => setState(() {}),
                         ),
                       ),
                       Expanded(

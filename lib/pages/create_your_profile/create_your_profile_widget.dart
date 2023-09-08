@@ -51,7 +51,7 @@ class _CreateYourProfileWidgetState extends State<CreateYourProfileWidget> {
         backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
         automaticallyImplyLeading: false,
         title: Text(
-          'Your Profile',
+          '관리자 정보',
           style: FlutterFlowTheme.of(context).headlineMedium,
         ),
         actions: [
@@ -88,7 +88,7 @@ class _CreateYourProfileWidgetState extends State<CreateYourProfileWidget> {
                       children: [
                         Expanded(
                           child: Text(
-                            'Fill out your profile now in order to complete setup of your profile.',
+                            '아래의 정보를 입력하세요.',
                             style: FlutterFlowTheme.of(context).bodySmall,
                           ),
                         ),
@@ -203,7 +203,7 @@ class _CreateYourProfileWidgetState extends State<CreateYourProfileWidget> {
                             controller: _model.yourNameController,
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelText: 'Your Name',
+                              labelText: '관리자 이름',
                               labelStyle:
                                   FlutterFlowTheme.of(context).titleSmall,
                               enabledBorder: UnderlineInputBorder(

@@ -8,6 +8,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_toggle_icon.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_video_player.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -116,7 +117,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
               ),
             if (Theme.of(context).brightness == Brightness.dark)
               Image.asset(
-                'assets/images/logoSniff@2x.png',
+                'assets/images/images.jpeg',
                 width: 120.0,
                 height: 50.0,
                 fit: BoxFit.fitWidth,
@@ -606,7 +607,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                             Align(
                                                               alignment:
                                                                   AlignmentDirectional(
-                                                                      0.0,
+                                                                      0.00,
                                                                       0.25),
                                                               child: InkWell(
                                                                 splashColor: Colors
@@ -659,7 +660,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                             Align(
                                                               alignment:
                                                                   AlignmentDirectional(
-                                                                      0.0,
+                                                                      0.00,
                                                                       0.25),
                                                               child: InkWell(
                                                                 splashColor: Colors

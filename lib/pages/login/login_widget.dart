@@ -1,7 +1,9 @@
 import '/auth/firebase_auth/auth_util.dart';
+import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/form_field_controller.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -62,12 +64,12 @@ class _LoginWidgetState extends State<LoginWidget> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.00, 0.00),
                   child: Padding(
                     padding:
                         EdgeInsetsDirectional.fromSTEB(24.0, 56.0, 0.0, 0.0),
                     child: Image.asset(
-                      'assets/images/logoSniff@2x.png',
+                      'assets/images/images.jpeg',
                       width: 140.0,
                       height: 40.0,
                       fit: BoxFit.fitWidth,
@@ -103,7 +105,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Text(
-                            'Welcome Back,',
+                            '학원생활',
                             style: FlutterFlowTheme.of(context).displaySmall,
                           ),
                         ],
@@ -121,46 +123,8 @@ class _LoginWidgetState extends State<LoginWidget> {
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Text(
-                                'Access your account below or',
+                                '학원에서 부여 받은 계정으로 로그인',
                                 style: FlutterFlowTheme.of(context).bodyMedium,
-                              ),
-                              FFButtonWidget(
-                                onPressed: () async {
-                                  context.pushNamed(
-                                    'createAccount',
-                                    extra: <String, dynamic>{
-                                      kTransitionInfoKey: TransitionInfo(
-                                        hasTransition: true,
-                                        transitionType: PageTransitionType.fade,
-                                        duration: Duration(milliseconds: 200),
-                                      ),
-                                    },
-                                  );
-                                },
-                                text: 'Create Account',
-                                options: FFButtonOptions(
-                                  width: 125.0,
-                                  height: 28.0,
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 0.0),
-                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 0.0),
-                                  color: Color(0x00FFFFFF),
-                                  textStyle: FlutterFlowTheme.of(context)
-                                      .titleSmall
-                                      .override(
-                                        fontFamily: 'Urbanist',
-                                        color: FlutterFlowTheme.of(context)
-                                            .secondary,
-                                        fontSize: 14.0,
-                                      ),
-                                  elevation: 0.0,
-                                  borderSide: BorderSide(
-                                    color: Colors.transparent,
-                                    width: 1.0,
-                                  ),
-                                  borderRadius: BorderRadius.circular(8.0),
-                                ),
                               ),
                             ],
                           ),
@@ -190,7 +154,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                             controller: _model.emailController,
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelText: 'Your email...',
+                              labelText: '아이디',
                               labelStyle:
                                   FlutterFlowTheme.of(context).bodySmall,
                               enabledBorder: OutlineInputBorder(
@@ -254,7 +218,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                             controller: _model.passwordController,
                             obscureText: !_model.passwordVisibility,
                             decoration: InputDecoration(
-                              labelText: 'Password',
+                              labelText: '비밀번호',
                               labelStyle:
                                   FlutterFlowTheme.of(context).bodySmall,
                               enabledBorder: OutlineInputBorder(
@@ -309,47 +273,40 @@ class _LoginWidgetState extends State<LoginWidget> {
                         ),
                       ),
                     ),
+                    FlutterFlowDropDown<String>(
+                      controller: _model.dropDownValueController ??=
+                          FormFieldController<String>(null),
+                      options: ['Option 1'],
+                      onChanged: (val) =>
+                          setState(() => _model.dropDownValue = val),
+                      width: 300.0,
+                      height: 50.0,
+                      textStyle: FlutterFlowTheme.of(context).bodyMedium,
+                      hintText: 'Please select...',
+                      icon: Icon(
+                        Icons.keyboard_arrow_down_rounded,
+                        color: FlutterFlowTheme.of(context).secondaryText,
+                        size: 24.0,
+                      ),
+                      fillColor:
+                          FlutterFlowTheme.of(context).secondaryBackground,
+                      elevation: 2.0,
+                      borderColor: FlutterFlowTheme.of(context).alternate,
+                      borderWidth: 2.0,
+                      borderRadius: 8.0,
+                      margin:
+                          EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                      hidesUnderline: true,
+                      isSearchable: false,
+                      isMultiSelect: false,
+                    ),
                     Padding(
                       padding:
                           EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 12.0),
                       child: Row(
-                        mainAxisSize: MainAxisSize.max,
+                        mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 12.0, 0.0, 0.0),
-                            child: FFButtonWidget(
-                              onPressed: () async {
-                                context.pushNamed('forgotPassword');
-                              },
-                              text: 'Forgot Password?',
-                              options: FFButtonOptions(
-                                width: 170.0,
-                                height: 50.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 0.0),
-                                color: FlutterFlowTheme.of(context)
-                                    .secondaryBackground,
-                                textStyle: FlutterFlowTheme.of(context)
-                                    .titleSmall
-                                    .override(
-                                      fontFamily: 'Urbanist',
-                                      color:
-                                          FlutterFlowTheme.of(context).primary,
-                                      fontSize: 14.0,
-                                    ),
-                                elevation: 0.0,
-                                borderSide: BorderSide(
-                                  color: Colors.transparent,
-                                  width: 1.0,
-                                ),
-                                borderRadius: BorderRadius.circular(12.0),
-                              ),
-                            ),
-                          ),
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 12.0, 0.0, 0.0),
@@ -394,45 +351,6 @@ class _LoginWidgetState extends State<LoginWidget> {
                             ),
                           ),
                         ],
-                      ),
-                    ),
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(2.0, 0.0, 0.0, 12.0),
-                      child: FFButtonWidget(
-                        onPressed: () async {
-                          GoRouter.of(context).prepareAuthEvent();
-                          final user =
-                              await authManager.signInAnonymously(context);
-                          if (user == null) {
-                            return;
-                          }
-
-                          context.goNamedAuth('homePage', context.mounted);
-                        },
-                        text: 'Continue as guest',
-                        options: FFButtonOptions(
-                          width: 200.0,
-                          height: 40.0,
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 0.0),
-                          iconPadding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 0.0),
-                          color: Color(0x00FFFFFF),
-                          textStyle: FlutterFlowTheme.of(context)
-                              .titleSmall
-                              .override(
-                                fontFamily: 'Urbanist',
-                                color: FlutterFlowTheme.of(context).secondary,
-                                fontSize: 14.0,
-                              ),
-                          elevation: 0.0,
-                          borderSide: BorderSide(
-                            color: Colors.transparent,
-                            width: 1.0,
-                          ),
-                          borderRadius: BorderRadius.circular(8.0),
-                        ),
                       ),
                     ),
                   ],

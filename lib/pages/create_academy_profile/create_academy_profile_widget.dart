@@ -9,25 +9,27 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'create_dog_profile_model.dart';
-export 'create_dog_profile_model.dart';
+import 'create_academy_profile_model.dart';
+export 'create_academy_profile_model.dart';
 
-class CreateDogProfileWidget extends StatefulWidget {
-  const CreateDogProfileWidget({Key? key}) : super(key: key);
+class CreateAcademyProfileWidget extends StatefulWidget {
+  const CreateAcademyProfileWidget({Key? key}) : super(key: key);
 
   @override
-  _CreateDogProfileWidgetState createState() => _CreateDogProfileWidgetState();
+  _CreateAcademyProfileWidgetState createState() =>
+      _CreateAcademyProfileWidgetState();
 }
 
-class _CreateDogProfileWidgetState extends State<CreateDogProfileWidget> {
-  late CreateDogProfileModel _model;
+class _CreateAcademyProfileWidgetState
+    extends State<CreateAcademyProfileWidget> {
+  late CreateAcademyProfileModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => CreateDogProfileModel());
+    _model = createModel(context, () => CreateAcademyProfileModel());
 
     _model.dogNameController ??= TextEditingController();
     _model.dogBreedController ??= TextEditingController();
@@ -50,7 +52,7 @@ class _CreateDogProfileWidgetState extends State<CreateDogProfileWidget> {
         backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
         automaticallyImplyLeading: false,
         title: Text(
-          'Dog Profile',
+          '학원 정보',
           style: FlutterFlowTheme.of(context).headlineMedium,
         ),
         actions: [
@@ -87,7 +89,7 @@ class _CreateDogProfileWidgetState extends State<CreateDogProfileWidget> {
                       children: [
                         Expanded(
                           child: Text(
-                            'Fill out your dog profiles below! And then get to sharing your pups!',
+                            '아래의 학원 정보를 입력하세요',
                             style: FlutterFlowTheme.of(context).bodySmall,
                           ),
                         ),
@@ -195,7 +197,7 @@ class _CreateDogProfileWidgetState extends State<CreateDogProfileWidget> {
                               controller: _model.dogNameController,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: 'Dog Name',
+                                labelText: '학원명',
                                 labelStyle:
                                     FlutterFlowTheme.of(context).titleSmall,
                                 enabledBorder: UnderlineInputBorder(
@@ -263,7 +265,7 @@ class _CreateDogProfileWidgetState extends State<CreateDogProfileWidget> {
                               controller: _model.dogBreedController,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: 'Dog Breed',
+                                labelText: '학원 전화번호',
                                 labelStyle:
                                     FlutterFlowTheme.of(context).bodySmall,
                                 enabledBorder: UnderlineInputBorder(
@@ -330,7 +332,7 @@ class _CreateDogProfileWidgetState extends State<CreateDogProfileWidget> {
                               controller: _model.dogAgeController,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: 'Dog Age',
+                                labelText: '학원 운영시간(09:00 ~ 18:00)',
                                 labelStyle:
                                     FlutterFlowTheme.of(context).bodySmall,
                                 enabledBorder: UnderlineInputBorder(
@@ -391,56 +393,10 @@ class _CreateDogProfileWidgetState extends State<CreateDogProfileWidget> {
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            'You can add multiple pups in your profile.',
-                            style: FlutterFlowTheme.of(context).bodySmall,
-                          ),
-                        ],
-                      ),
-                    ),
                     Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 20.0, 40.0),
-                          child: FFButtonWidget(
-                            onPressed: () async {
-                              context.goNamed('createYourProfile');
-                            },
-                            text: 'Skip',
-                            options: FFButtonOptions(
-                              width: 100.0,
-                              height: 50.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                              color: FlutterFlowTheme.of(context).background,
-                              textStyle: FlutterFlowTheme.of(context)
-                                  .titleSmall
-                                  .override(
-                                    fontFamily: 'Urbanist',
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryDark,
-                                  ),
-                              elevation: 0.0,
-                              borderSide: BorderSide(
-                                color: Colors.transparent,
-                                width: 1.0,
-                              ),
-                              borderRadius: BorderRadius.circular(40.0),
-                            ),
-                          ),
-                        ),
                         Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 40.0),

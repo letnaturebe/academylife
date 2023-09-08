@@ -98,7 +98,7 @@ class _AddChatUsersWidgetState extends State<AddChatUsersWidget> {
               ],
               borderRadius: BorderRadius.circular(0.0),
             ),
-            alignment: AlignmentDirectional(0.0, 0.0),
+            alignment: AlignmentDirectional(0.00, 0.00),
             child: TextFormField(
               controller: _model.textController,
               obscureText: false,

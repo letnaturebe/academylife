@@ -94,7 +94,7 @@ class _CreateGroupChatWidgetState extends State<CreateGroupChatWidget> {
               ],
               borderRadius: BorderRadius.circular(0.0),
             ),
-            alignment: AlignmentDirectional(0.0, 0.0),
+            alignment: AlignmentDirectional(0.00, 0.00),
             child: Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0.0, 1.0, 0.0, 1.0),
               child: TextFormField(

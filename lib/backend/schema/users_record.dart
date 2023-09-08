@@ -61,6 +61,11 @@ class UsersRecord extends FirestoreRecord {
   bool get isFollowed => _isFollowed ?? false;
   bool hasIsFollowed() => _isFollowed != null;
 
+  // "isAdmin" field.
+  bool? _isAdmin;
+  bool get isAdmin => _isAdmin ?? false;
+  bool hasIsAdmin() => _isAdmin != null;
+
   void _initializeFields() {
     _displayName = snapshotData['display_name'] as String?;
     _email = snapshotData['email'] as String?;
@@ -71,6 +76,7 @@ class UsersRecord extends FirestoreRecord {
     _userName = snapshotData['userName'] as String?;
     _bio = snapshotData['bio'] as String?;
     _isFollowed = snapshotData['isFollowed'] as bool?;
+    _isAdmin = snapshotData['isAdmin'] as bool?;
   }
 
   static CollectionReference get collection =>
@@ -116,6 +122,7 @@ Map<String, dynamic> createUsersRecordData({
   String? userName,
   String? bio,
   bool? isFollowed,
+  bool? isAdmin,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -128,6 +135,7 @@ Map<String, dynamic> createUsersRecordData({
       'userName': userName,
       'bio': bio,
       'isFollowed': isFollowed,
+      'isAdmin': isAdmin,
     }.withoutNulls,
   );
 
@@ -147,7 +155,8 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e1?.phoneNumber == e2?.phoneNumber &&
         e1?.userName == e2?.userName &&
         e1?.bio == e2?.bio &&
-        e1?.isFollowed == e2?.isFollowed;
+        e1?.isFollowed == e2?.isFollowed &&
+        e1?.isAdmin == e2?.isAdmin;
   }
 
   @override
@@ -160,7 +169,8 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e?.phoneNumber,
         e?.userName,
         e?.bio,
-        e?.isFollowed
+        e?.isFollowed,
+        e?.isAdmin
       ]);
 
   @override
