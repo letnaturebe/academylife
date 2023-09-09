@@ -136,8 +136,12 @@ class _HomePageWidgetState extends State<HomePageWidget>
                 color: FlutterFlowTheme.of(context).grayIcon,
                 size: 24.0,
               ),
-              onPressed: () {
-                print('IconButton pressed ...');
+              onPressed: () async {
+                GoRouter.of(context).prepareAuthEvent();
+                await authManager.signOut();
+                GoRouter.of(context).clearRedirectLocation();
+
+                context.goNamedAuth('login', context.mounted);
               },
             ),
           ),
